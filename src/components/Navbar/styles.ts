@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import BGG2 from '../../assets/bg/BGGD2.png'
 export const NavbarContainer = styled.div`
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
       @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Orbitron&family=Ubuntu&family=Wavefont:wght@200&display=swap');
     width: 100vw;
     height: 15vh;
@@ -35,7 +34,7 @@ export const NavbarContainer = styled.div`
         gap: 1rem;
     }
     .links ul li{
-        font-size: 0.9rem;
+        font-size: 0.75rem;
         list-style: none;
     }
     .button{
@@ -46,6 +45,8 @@ export const NavbarContainer = styled.div`
         height: 8vh;
         color: white;
         text-transform: uppercase;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1.0625rem;
         font-weight: 900;
         border-radius: 5px; 
         border: none;

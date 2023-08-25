@@ -4,10 +4,9 @@ const GlobalStyle = createGlobalStyle`
   html,
   body {
     color: ${({ theme }) => theme.colors.primary};
-    padding: 0;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-size: 16px;
+    
+
   }
 
   a {
@@ -17,6 +16,9 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
   }
 `
 
