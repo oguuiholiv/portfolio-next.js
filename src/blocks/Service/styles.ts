@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ServicesContainer = styled.div`
 @media screen and (min-width: 1024px){
     width: 100vw;
-    height: 80vh;
+    height: 85vh;
     background: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
     display: flex;
     flex-direction: column;

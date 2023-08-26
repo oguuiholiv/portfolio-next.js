@@ -1,6 +1,7 @@
 import About from "../src/blocks/About";
 import Presentation from "../src/blocks/Presentation";
 import Service from "../src/blocks/Service";
+import Technologies from "../src/blocks/Technologies";
 import Navbar from "../src/components/Navbar";
 import Head from "next/head";
 
@@ -20,6 +21,7 @@ export default function Home() {
       <Presentation />
       <About />
       <Service />
+      <Technologies />
     </div>
   );
 }

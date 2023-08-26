@@ -18,6 +18,11 @@ export const PresentationContainer = styled.div`
     justify-content: center;
     gap: 0;
     font-size: 0.65rem;
+    .icons{
+      display: flex;
+      gap: 1.25rem;
+      padding-top: 1.0625rem;
+    }
     .hello{
         font-size: 1.5625rem;
     }
@@ -45,8 +50,9 @@ export const PresentationContainer = styled.div`
     width: 50%;
 
     .content{
-        width: 100%;
-        height: 100%;
+        margin-top: 9.125rem;
+        width: 43.92vw;
+        height: 52.08vh;
         background: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%);
     }
   }
