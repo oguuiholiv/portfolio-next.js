@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
             <a href="#">
                 <li>PROJETOS</li>
             </a>
-            <a href="#">
+            <a target='_blank' href="https://drive.google.com/file/d/1b7LDv74ADtb2kwTVTo59_5eFFsuxNobL/view?usp=sharing">
                 <li>CURRÍCULO</li>
             </a>
         </ul>
