@@ -1,5 +1,8 @@
 import About from "../src/blocks/About";
+import Contact from "../src/blocks/Contact";
+import Footer from "../src/blocks/Footer";
 import Presentation from "../src/blocks/Presentation";
+import Projects from "../src/blocks/Projects";
 import Service from "../src/blocks/Service";
 import Technologies from "../src/blocks/Technologies";
 import Navbar from "../src/components/Navbar";
@@ -22,6 +25,9 @@ export default function Home() {
       <About />
       <Service />
       <Technologies />
+      <Projects /> 
+      <Contact />
+      <Footer />
     </div>
   );
 }
