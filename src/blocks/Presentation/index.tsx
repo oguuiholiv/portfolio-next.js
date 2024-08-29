@@ -15,7 +15,7 @@ const Presentation: React.FC = () => {
           desenvolvedor <span className="colored">full stack</span>
         </p>
         <div className="icons">
-          <a target="_blank" href="https://github.com/oguuiholiv">
+          <a target="_blank" href="https://github.com/ooguuiholiv">
             <Image alt="github" src={Github} />
           </a>
           <a target="_blank" href="https://www.linkedin.com/in/oguuiholiv/">

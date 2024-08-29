@@ -11,13 +11,15 @@ import Head from "next/head";
 export default function Home() {
   return (
     <div>
-   
+        <Head>
+          <title>Portfolio - Guilherme Franco</title>
+          <meta name="description" content="Projeto de portfolio com Next.js" />
+          <meta charSet="utf-8" />
+        </Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Orbitron&family=Ubuntu&family=Wavefont:wght@200&display=swap"
-          
-        />
+          href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Orbitron&family=Ubuntu&family=Wavefont:wght@200&display=swap"/>
       
 
       <Navbar />

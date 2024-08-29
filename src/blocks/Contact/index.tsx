@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import * as S from './styles'
 
 const Contact: React.FC = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
   return (
     <S.ContactContainer>
         <div className="cta">
