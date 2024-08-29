@@ -71,7 +71,7 @@ export const ProjectsContainer = styled.div`
     }
 
     .slide-text p {
-      font-size: 1rem;
+      font-size: 0.8rem;
       color: #666;
       margin-bottom: 10px;
     }
