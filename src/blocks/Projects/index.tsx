@@ -11,13 +11,14 @@ const Projects: React.FC = () => {
   useEffect(() => {
     fetch(`https://api.github.com/users/${username}/repos`, {
       headers: {
-        Authorization: `token ${accessToken}`,
+        Authorization: `${accessToken}`,
       },
     })
       .then((response) => response.json())
       .then((repos) => {
         const filteredRepos = repos.filter(
-          (repo) => repo.name !== "ooguuiholiv"
+          (repo) =>
+            repo.name !== "ooguuiholiv" && repo.name !== "portfolio-next.js"
         );
         // Mapeia os repositórios para buscar as informações adicionais (descrição e imagem)
         const projectPromises = filteredRepos.map((repo) => {
@@ -64,7 +65,7 @@ const Projects: React.FC = () => {
             description,
             imageUrl,
             html_url: repo.html_url,
-            site_url: repo.homepage
+            site_url: repo.homepage,
           }));
         });
 
