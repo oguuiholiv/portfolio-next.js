@@ -24,7 +24,7 @@ import Vercel from "../../assets/icons/techs/vercel.png";
 
 const Technologies: React.FC = () => {
   return (
-    <TechContainer>
+    <TechContainer id="TechContainer">
       <div className="title">
         <code className="code">
           &lt; h1 &gt;

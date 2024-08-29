@@ -24,7 +24,12 @@ const Projects: React.FC = () => {
         const projectPromises = filteredRepos.map((repo) => {
           return Promise.all([
             fetch(
-              `https://api.github.com/repos/${username}/${repo.name}/contents/presentation/descricao.txt`
+              `https://api.github.com/repos/${username}/${repo.name}/contents/presentation/descricao.txt`,
+              {
+                headers: {
+                  Authorization: `${accessToken}`,
+                },
+              }
             )
               .then((response) => response.json())
               .then((content) => {
@@ -46,7 +51,12 @@ const Projects: React.FC = () => {
                 return "Descrição não encontrada"; // Ou qualquer outro valor padrão
               }),
             fetch(
-              `https://api.github.com/repos/${username}/${repo.name}/contents/presentation/imagem.jpg`
+              `https://api.github.com/repos/${username}/${repo.name}/contents/presentation/imagem.jpg`,
+              {
+                headers: {
+                  Authorization: `${accessToken}`,
+                },
+              }
             )
               .then((response) => response.json())
               .then(
@@ -88,7 +98,7 @@ const Projects: React.FC = () => {
   }, []); // Executa o efeito apenas uma vez ao montar o componente
 
   return (
-    <S.ProjectsContainer>
+    <S.ProjectsContainer id="ProjectsContainer">
       <div className="title">
         <h1>
           Conheça meus <span className="colored">trabalhos</span>
