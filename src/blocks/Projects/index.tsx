@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Swiper from "swiper";
+import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css"; // Importe o CSS do Swiper
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import * as S from "./styles";
 
 const Projects: React.FC = () => {
@@ -70,10 +73,44 @@ const Projects: React.FC = () => {
                 );
                 return ""; // Ou uma URL de imagem padrão
               }),
-          ]).then(([description, imageUrl]) => ({
+              fetch(
+                `https://api.github.com/repos/${username}/${repo.name}/contents/presentation/stacks.txt`,
+                {
+                  headers: {
+                    Authorization: `${accessToken}`, // Certifique-se de usar "Bearer" antes do token se necessário
+                  },
+                }
+              )
+                .then((response) => {
+                  if (!response.ok) {
+                    throw new Error(`Erro ao buscar o arquivo stack: ${response.statusText}`);
+                  }
+                  return response.json();
+                })
+                .then((content) => {
+                  const decodedContent = atob(content.content); // Decodifica o conteúdo em base64
+                  const stackText = decodedContent.trim(); // Remove espaços em branco no início e no final
+              
+                  // Divide as linguagens com base no caractere #
+                  const stackLanguages = stackText
+                    .split("#")
+                    .filter((lang) => lang.trim()) // Remove strings vazias
+                    .map((lang) => lang.trim()); // Remove espaços em branco adicionais
+              
+                  return stackLanguages; // Retorna o array de linguagens
+                })
+                .catch((error) => {
+                  console.error(
+                    `Erro ao buscar stack para o repositório ${repo.name}:`,
+                    error
+                  );
+                  return []; // Retorna um array vazio se ocorrer algum erro
+                })
+          ]).then(([description, imageUrl, stackLanguages]) => ({
             name: repo.name,
             description,
             imageUrl,
+            stackLanguages,
             html_url: repo.html_url,
             site_url: repo.homepage,
           }));
@@ -88,8 +125,16 @@ const Projects: React.FC = () => {
             // Pequeno atraso para garantir que o DOM esteja atualizado
             new Swiper(".swiper", {
               // ... suas configurações do Swiper
+              modules: [Navigation, Pagination],
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+              pagination: {
+                el: ".swiper-pagination",
+              },
             });
-          }, 0);
+          });
         });
       })
       .catch((error) =>
@@ -117,6 +162,13 @@ const Projects: React.FC = () => {
                   <div className="slide-text">
                     <h3>{project.name}</h3>
                     <p>{project.description}</p>
+                    <div className="stacks">
+                      {project.stackLanguages.map((language, index) => (
+                        <span key={index} className="badge">
+                          {language}
+                        </span>
+                      ))}
+                    </div>
                     <a
                       href={project.html_url}
                       target="_blank"
