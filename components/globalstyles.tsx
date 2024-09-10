@@ -5,6 +5,9 @@ const GlobalStyle = createGlobalStyle`
   body {
     color: ${({ theme }) => theme.colors.primary};
     font-size: 16px;
+    width: 100%;
+    heih: 100%;
+    overflow-x: hidden;
     
 
   }

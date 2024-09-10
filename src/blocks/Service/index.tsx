@@ -8,7 +8,7 @@ import Dev from "../../assets/icons/dev.png";
 import Seo from "../../assets/icons/seo.png";
 import Des from "../../assets/icons/designer.png";
 
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 const rotate = keyframes`
   from {
     transform: rotate(0deg);
@@ -18,10 +18,8 @@ const rotate = keyframes`
   }
 `;
 const RotatingImage = styled(Image)`
-   animation: ${rotate} 3s linear infinite;
+  animation: ${rotate} 3s linear infinite;
 `;
-
-
 
 const Service: React.FC = () => {
   return (
@@ -40,70 +38,77 @@ const Service: React.FC = () => {
           <RotatingImage
             alt="img-card"
             src={Motion}
-            style={{ marginTop: "2.0625rem"}}
           />
           <p
             className="title-card"
-            style={{ maxWidth: "6.58vw", maxHeight: "4.03vh" }}
+            style={{ maxWidth: "auto", maxHeight: "auto" }}
           >
             Motion
           </p>
           <p
             className="content"
-            style={{ maxWidth: "18.30vw", maxHeight: "9.11vh" }}
+            style={{ maxWidth: "auto", maxHeight: "auto" }}
           >
             Crio designs visualmente impressionantes que se conectam com seu
             público.
           </p>
         </div>
         <div className="card">
-          <RotatingImage alt="img-card" src={Dev} style={{ marginTop: "2.0625rem" }} />
+          <RotatingImage
+            alt="img-card"
+            src={Dev}
+          />
           <p
             className="title-card"
-            style={{ maxWidth: "17.86vw", maxHeight: "4.03vh" }}
+            style={{ maxWidth: "auto", maxHeight: "auto" }}
           >
             Desenvolvimento
           </p>
           <p
             className="content"
-            style={{ maxWidth: "18.30vw", maxHeight: "9.11vh" }}
+            style={{ maxWidth: "auto", maxHeight: "auto" }}
           >
             Dando vida à sua visão com as últimas tendências em tecnologia e
             design.
           </p>
         </div>
         <div className="card">
-          <RotatingImage alt="img-card" src={Seo} style={{ marginTop: "2.0625rem" }} />
+          <RotatingImage
+            alt="img-card"
+            src={Seo}
+          />
           <p
             className="title-card"
             style={{
               textTransform: "uppercase",
-              maxWidth: "4.39vw",
-              maxHeight: "4.03vh",
+              maxWidth: "auto",
+              maxHeight: "auto",
             }}
           >
             SEO
           </p>
           <p
             className="content"
-            style={{ maxWidth: "18.30vw", maxHeight: "12.36vh" }}
+            style={{ maxWidth: "auto", maxHeight: "auto" }}
           >
             Otimizo a visibilidade do seu site nos mecanismos de busca! Com
             técnicas de SEO, aumentaremos a presença online do seu negócio.
           </p>
         </div>
         <div className="card">
-          <RotatingImage alt="img-card" src={Des} style={{ marginTop: "2.0625rem" }} />
+          <RotatingImage
+            alt="img-card"
+            src={Des}
+          />
           <p
             className="title-card"
-            style={{ maxWidth: "11.78vw", maxHeight: "8.07vh" }}
+            style={{ maxWidth: "auto", maxHeight: "auto" }}
           >
-            Designer <span style={{ textTransform: "lowercase" }}> e </span>{" "}
-            criatividade
+            Designer
           </p>
           <p
             className="content"
-            style={{ maxWidth: "18.30vw", maxHeight: "9.11vh" }}
+            style={{ maxWidth: "auto", maxHeight: "auto" }}
           >
             Transformo ideias em experiências excepcionais de aplicativos móveis
             e da Web.
