@@ -12,6 +12,7 @@ export const PresentationContainer = styled.div`
     .content-text {
       width: 50%;
       height: 100%;
+      margin-top: 14rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
